@@ -123,7 +123,6 @@ const clearForm = () => {
   formData.value.reason       = '';
   formData.value.gender       = '';
 
-  submittedCards.value = [];
 };
 </script>
 

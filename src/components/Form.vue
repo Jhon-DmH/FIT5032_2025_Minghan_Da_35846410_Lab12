@@ -2,7 +2,7 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2">
-          <h1 class="text-center">User Information Form</h1>
+          <h1 class="text-center">User Information Form Lab12</h1>
           <form @submit.prevent="submitForm">
             <div class="row mb-3">
                 <div class="col-sm-6 col-md-6">
@@ -49,7 +49,7 @@
                 {{ errors.email }}
               </div>
             </div>
-  
+
             <div class="row mb-3">
                 <div class="col-sm-6 col-md-6">
                 <div class="form-check">
@@ -87,7 +87,7 @@
                 </div>
               </div>
             </div>
-  
+
             <div class="mb-3">
               <label for="reason" class="form-label">Reason for joining</label>
               <textarea
@@ -102,7 +102,7 @@
                 {{ errors.reason }}
               </div>
             </div>
-  
+
             <div class="text-center">
               <button type="submit" class="btn btn-primary me-2">Submit</button>
               <button
@@ -135,14 +135,14 @@
   </div>
 </div>
   </template>
-  
+
 
 <script setup>
 // Our logic will go here
 import { ref } from 'vue';
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
-  
+
 const formData = ref({
     username: '',
     password: '',
@@ -241,7 +241,7 @@ const validateGender = (blur) => {
 const validateEmail = (blur) => {
   const email = formData.value.email;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
+
   if (!email) {
     if (blur) errors.value.email = "Email is required.";
   } else if (!emailRegex.test(email)) {
